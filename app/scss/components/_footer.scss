@@ -1,0 +1,26 @@
+.footer {
+  padding: 50px 0;
+  background-color: #00133D;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+    color: #FFF;
+  }
+
+  &__head {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}

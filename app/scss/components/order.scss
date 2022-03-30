@@ -1,0 +1,58 @@
+.order {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 160px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      &::before {
+        content: "";
+        width: 90%;
+        height: 8px;
+        background-image: url('../images/icons/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        right: -90%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 130px;
+    text-align: center;
+    background-size: 115px 120px;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &--form {
+      background-image: url('../images/icons/step1.svg');
+    }
+
+    &--sum {
+      background-image: url('../images/icons/step2.svg');
+    }
+
+    &--pay {
+      background-image: url('../images/icons/step3.svg');
+    }
+  }
+
+  &__step {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}

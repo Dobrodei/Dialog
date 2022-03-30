@@ -1,0 +1,67 @@
+.benefits {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 160px;
+    grid-row-gap: 25px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 110%;
+      height: 220px;
+      border: 1px solid #EAE8E8;
+      border-radius: 100px;
+      position: absolute;
+      left: -50px;
+      top: 50px;
+      z-index: -1;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    text-align: center;
+    background-size: 88px;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &--profit {
+      background-image: url('../images/icons/profit.svg');
+    }
+
+    &--profess {
+      background-image: url('../images/icons/profess.svg');
+    }
+
+    &--time {
+      background-image: url('../images/icons/time.svg');
+    }
+
+    &--available {
+      background-image: url('../images/icons/available.svg');
+    }
+
+    &--reliably {
+      background-image: url('../images/icons/reliably.svg');
+    }
+
+    &--comfort {
+      background-image: url('../images/icons/comfort.svg');
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &__descr {
+    color: #555;
+  }
+}
