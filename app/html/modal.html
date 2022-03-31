@@ -1,0 +1,104 @@
+<div class="modal">
+  <div class="modal__container" role="dialog" aria-modal="true">
+    <button class="modal__btn" aria-label="Закрыть модальное окно"></button>
+    <div class="modal__content">
+      <h2 class="modal__title">
+        Рассчет стоимости перевода
+      </h2>
+      <div class="modal__item">
+        <div class="modal__box">
+          <span class="modal__step">
+            1. Направление перевода
+          </span>
+          <label class="modal__label">
+            <span class="sr-only">
+              Выберете язык
+            </span>
+            <span class="modal__descr">
+              c
+            </span>
+            <select class="modal__select" name="select">
+              <option value="Русский">
+                Русский
+              </option>
+            </select>
+          </label>
+          <label class="modal__label">
+            <span class="sr-only">
+              Выберете язык
+            </span>
+            <span class="modal__descr">
+              на
+            </span>
+            <select class="modal__select" name="select">
+              <option value="Немецкий">
+                Немецкий
+              </option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="modal__item">
+        <span class="modal__step">
+          2. Объем перевода
+        </span>
+        <p class="modal__text">
+          Для расчета Вы можете воспользоваться двумя вариантами:
+        </p>
+        <span class="modal__step">
+          а) Введите количество символов, содержащихся в тексте для перевода
+        </span>
+        <label class="modal__label">
+          <span class="modal__descr">
+            Количество символов
+          </span>
+          <input class="modal__input" type="number" value="0">
+        </label>
+        <span class="modal__step">
+          б) Введите текст в это поле, калькулятор сам посчитает количество символов и стоимость
+        </span>
+        <label class="sr-only" for="modal-textarea">
+          Поле для ввода текста
+        </label>
+        <textarea class="modal__textarea" id="modal-textarea" name="textarea"></textarea>
+        <div class="modal__box modal__item">
+          <span class="modal__descr">
+            Количество символов
+          </span>
+          <span class="modal__num">
+            0
+          </span>
+          <button class="modal__clear" aria-label="Кнопка для очистки полей">
+            Очистить
+          </button>
+        </div>
+      </div>
+      <div class="modal__item">
+        <div class="modal__box">
+          <span class="modal__step">
+            3. Общая стоимость перевода составляет:
+          </span>
+          <span class="modal__result">
+            <span>0</span>
+            Рублей
+          </span>
+        </div>
+      </div>
+      <form class="modal__form modal-form" action="">
+        <div class="modal-form__inner">
+          <label class="modal-form__label">
+            <span class="sr-only">Введите имя</span>
+            <input class="modal-form__input" name="modal name" type="text" placeholder="Введите имя">
+          </label>
+          <label class="modal-form__label">
+            <span class="sr-only">Введите телефон</span>
+            <input class="modal-form__input" name="modal tel" type="text" placeholder="Введите телефон">
+          </label>
+          <button class="modal-form__btn btn" type="submit">
+            Заказать перевод
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,15 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 160px;
     margin-bottom: 40px;
+
+    @include small-tablet {
+      grid-gap: 70px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 40px;
+    }
   }
 
   &__item {
@@ -22,6 +31,10 @@
         right: -90%;
         top: 50%;
         transform: translateY(-50%);
+
+        @include small-tablet {
+          display: none;
+        }
       }
     }
   }

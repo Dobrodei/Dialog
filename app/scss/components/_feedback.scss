@@ -1,0 +1,170 @@
+.feedback {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+    border-radius: 20px;
+    background-color: $color-blue;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+    }
+  }
+
+  &__left {
+    width: 50%;
+    margin-right: 40px;
+    color: $color-white;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 25px;
+
+    @include small-tablet {
+      font-size: 22px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__descr {
+    max-width: 210px;
+    margin-right: 20px;
+
+    @include small-tablet {
+      align-self: flex-start;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    max-width: 185px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+.form {
+  width: 50%;
+  padding: 20px 35px;
+  background-color: $color-white;
+  border-radius: 10px;
+
+  &__label {
+    display: inline-block;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__descr {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #605E5E;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-dark;
+    background-color: transparent;
+
+    &[type="file"] {
+      font-size: 11px;
+      border-bottom: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__apply {
+    display: flex;
+    align-items: flex-start;
+
+    @include small-tablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__check {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+  }
+
+  .form__check:checked+.form__checkbox {
+    background-image: url(../images/icons/apply.svg);
+    border-color: $color-blue;
+  }
+
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+    border: 2px solid $color-dark;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  &__text {
+    font-size: 10px;
+    padding-left: 25px;
+  }
+
+  &__agreement {
+    text-decoration: underline;
+  }
+
+  &__btn {
+    margin-right: 10px;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include small-tablet {
+    padding: 15px;
+  }
+}

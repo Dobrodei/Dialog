@@ -13,12 +13,55 @@
   &__inner {
     display: flex;
     align-items: center;
+
+    @include small-tablet {
+      flex-direction: column;
+      padding: 50px;
+      padding-top: 70px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: scroll;
+      background-color: $color-blue;
+      transition: transform 0.3s ease;
+      transform: translateY(-200%);
+      z-index: 999;
+
+      &--visible {
+        transform: translateX(0%);
+      }
+    }
   }
 
   &__contacts {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contact {
+    @include small-tablet {
+      font-size: 20px;
+      color: $color-white;
+    }
+  }
+
+  &__btn {
+    @include tablet {
+      padding: 20px;
+    }
+
+    @include small-tablet {
+      max-width: 250px;
+      width: 100%;
+    }
   }
 }
 
@@ -30,6 +73,16 @@
   &__item {
     &:not(:last-child) {
       margin-right: 12px;
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
     }
   }
 
@@ -41,13 +94,29 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include small-tablet {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
 }
 
 .nav {
+  width: 100%;
+
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include small-tablet {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__item {
@@ -66,5 +135,61 @@
     &--active {
       border-bottom: 2px solid $color-yellow;
     }
+
+    @include small-tablet {
+      width: 100%;
+      font-size: 25px;
+      color: $color-white;
+    }
+  }
+
+  @include small-tablet {
+    margin-bottom: 25px;
+  }
+}
+
+.burger-btn {
+  width: 30px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9999;
+  transform: top 0.3s, right 0.3s;
+
+  &::before,
+  &::after,
+  &__line {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $color-dark;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  }
+
+  &--active {
+
+    &::before,
+    &::after {
+      background-color: $color-white;
+    }
+
+    &::before {
+      transform: translate(0, 12px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(0, -7px) rotate(-45deg);
+    }
+
+    .burger-btn__line {
+      opacity: 0;
+    }
+  }
+
+  @include small-tablet {
+    display: flex;
   }
 }

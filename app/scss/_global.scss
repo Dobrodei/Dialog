@@ -31,6 +31,14 @@ body {
 
 .section {
   padding: 100px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include small-tablet {
+    padding: 40px 0;
+  }
 }
 
 .title {
@@ -39,7 +47,12 @@ body {
   font-size: 32px;
   text-transform: uppercase;
   text-align: center;
-  color: $color-dark
+  color: $color-dark;
+
+  @include small-tablet {
+    font-size: 23px;
+    margin-bottom: 30px;
+  }
 }
 
 .btn {
@@ -47,10 +60,15 @@ body {
   font-weight: 500;
   font-size: 16px;
   padding: 12px 58px;
+  text-align: center;
   background: $color-yellow;
   box-shadow: 1px 2px 10px rgba(106, 106, 106, 0.15);
   border-radius: 22px;
   color: $color-dark;
+
+  @include small-tablet {
+    padding: 12px 30px;
+  }
 }
 
 .centred {
