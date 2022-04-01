@@ -30,10 +30,10 @@ body {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 70px 0;
 
   @include tablet {
-    padding: 80px 0;
+    padding: 50px 0;
   }
 
   @include small-tablet {
@@ -65,6 +65,11 @@ body {
   box-shadow: 1px 2px 10px rgba(106, 106, 106, 0.15);
   border-radius: 22px;
   color: $color-dark;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @include small-tablet {
     padding: 12px 30px;

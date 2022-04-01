@@ -1,4 +1,3 @@
-$(function () {
   const burgerBtn = document.querySelector('.burger-btn');
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelector('.modal-btn');
@@ -40,4 +39,3 @@ $(function () {
       body.classList.remove('body--hidden');
     }
   })
-})

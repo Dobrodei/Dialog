@@ -54,13 +54,16 @@
   }
 
   &__btn {
+    margin-right: 10px;
+
     @include tablet {
-      padding: 20px;
+      padding: 10px;
     }
 
     @include small-tablet {
       max-width: 250px;
       width: 100%;
+      margin-bottom: 15px;
     }
   }
 }
@@ -88,9 +91,9 @@
 
   &__link {
     display: inline-block;
-    width: 36px;
-    height: 36px;
-    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -102,6 +105,66 @@
   @include small-tablet {
     flex-direction: row;
     margin-bottom: 20px;
+  }
+}
+
+.lang {
+  position: relative;
+
+  &__checked {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('../images/ru.png');
+  }
+
+	&__list {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: 1px solid #ece;
+    background-color: $color-white;
+    border-radius: 10px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+	}
+
+	&__item {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+      border-bottom: 1px solid #ece;
+    }
+	}
+
+	&__country {
+    display: inline-block;
+    padding: 10px 0;
+    padding-left: 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    &--ua {
+      background-image: url('../images/ua.png');
+    }
+    &--de {
+      background-image: url('../images/de.png');
+    }
+	}
+  &:hover {
+    .lang__list {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @include small-tablet {
+    align-self: flex-end;
   }
 }
 
@@ -127,13 +190,21 @@
 
   &__link {
     display: inline-block;
+    font-weight: 500;
     font-size: 16px;
     padding: 15px 0;
+    border-bottom: 2px solid transparent;
     text-transform: uppercase;
     color: #000;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $color-yellow;
+    }
 
     &--active {
-      border-bottom: 2px solid $color-yellow;
+      border-color: $color-yellow;
     }
 
     @include small-tablet {

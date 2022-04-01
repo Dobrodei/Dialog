@@ -73,6 +73,11 @@
     margin-right: 15px;
     font-size: 16px;
     text-decoration: underline;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
 
     @include small-tablet {
       font-size: 14px;

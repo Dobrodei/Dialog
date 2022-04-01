@@ -5,32 +5,23 @@
   right: 0;
   bottom: 0;
   z-index: 1000;
-  padding: 0 15px;
+  padding: 15px;
+  display: flex;
   background-color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   overflow-y: auto;
   overflow-x: hidden;
-  text-align: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-  }
-
+ 
   &__container {
     position: relative;
     max-width: 1200px;
     width: 100%;
-    margin: 50px auto;
+    margin: auto;
     padding: 20px;
     padding-top: 50px;
-    display: inline-block;
-    vertical-align: middle;
     background-color: $color-white;
     border-radius: 10px;
     cursor: default;
@@ -103,6 +94,16 @@
     }
   }
 
+  &__labels {
+    .modal__label:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .modal__select {
+    max-width: 135px;
+  }
+
   &__step {
     display: block;
     font-weight: 600;
@@ -122,6 +123,15 @@
   &__label {
     display: inline-block;
     margin-bottom: 20px;
+  }
+
+  &__input {
+    border-bottom: 2px solid transparent;
+    outline: none;
+   
+    &:focus {
+      border-color: $color-blue;
+    }
   }
 
   &__descr {
@@ -168,14 +178,13 @@
   &--visible {
     opacity: 1;
     visibility: visible;
-    transition: opacity var(--transition-time), visibility var(--transition-time);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 
     .modal__container {
       display: inline-block;
     }
   }
 }
-
 
 .modal-form {
   padding: 20px;
@@ -205,10 +214,14 @@
   &__input {
     width: 100%;
     padding: 12px 10px;
-
+    border-bottom: 2px solid transparent;
+    outline: none;
     &::placeholder {
       font-size: 16px;
       color: $color-dark;
+    }
+    &:focus {
+      border-color: $color-blue;
     }
   }
 

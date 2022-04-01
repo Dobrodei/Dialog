@@ -10,32 +10,34 @@
           <span class="modal__step">
             1. Направление перевода
           </span>
-          <label class="modal__label">
-            <span class="sr-only">
-              Выберете язык
-            </span>
-            <span class="modal__descr">
-              c
-            </span>
-            <select class="modal__select" name="select">
-              <option value="Русский">
-                Русский
-              </option>
-            </select>
-          </label>
-          <label class="modal__label">
-            <span class="sr-only">
-              Выберете язык
-            </span>
-            <span class="modal__descr">
-              на
-            </span>
-            <select class="modal__select" name="select">
-              <option value="Немецкий">
-                Немецкий
-              </option>
-            </select>
-          </label>
+          <div class="modal__labels">
+            <label class="modal__label">
+              <span class="sr-only">
+                Выберете язык
+              </span>
+              <span class="modal__descr">
+                c
+              </span>
+              <select class="modal__select" name="select">
+                <option value="Русский">
+                  Русский
+                </option>
+              </select>
+            </label>
+            <label class="modal__label">
+              <span class="sr-only">
+                Выберете язык
+              </span>
+              <span class="modal__descr">
+                на
+              </span>
+              <select class="modal__select" name="select">
+                <option value="Немецкий">
+                  Немецкий
+                </option>
+              </select>
+            </label>
+          </div>
         </div>
       </div>
       <div class="modal__item">
@@ -68,7 +70,7 @@
           <span class="modal__num">
             0
           </span>
-          <button class="modal__clear" aria-label="Кнопка для очистки полей">
+          <button class="modal__clear" type="submit">
             Очистить
           </button>
         </div>
@@ -84,7 +86,7 @@
           </span>
         </div>
       </div>
-      <form class="modal__form modal-form" action="">
+      <form class="modal__form modal-form" action="#">
         <div class="modal-form__inner">
           <label class="modal-form__label">
             <span class="sr-only">Введите имя</span>
